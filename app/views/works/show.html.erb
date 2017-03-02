@@ -1,2 +1,8 @@
-<h1>Works#show</h1>
-<p>Find me in app/views/works/show.html.erb</p>
+<h1><%= @work.name %></h1>
+
+<div class="center jumbotron">
+<p><%= image_tag @work.image %></p>
+<p><%= @work.contents %></p>
+</div>
+
+<p><%= button_to "戻る", { :action => "index" },{ :method => :get} %></p>

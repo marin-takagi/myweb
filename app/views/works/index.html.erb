@@ -1,2 +1,13 @@
-<h1>Works#index</h1>
-<p>Find me in app/views/works/index.html.erb</p>
+<h1>index</h1>
+<div class="container">
+  <div class="row center">
+      <% @works.each do |work| %>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <p><%= link_to image_tag(work.image.thumb.url), work%></p>
+            <p class=contents_text><%= link_to work.name, work %></p>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

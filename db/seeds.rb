@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+6.times do |index|
+  Work.create(name: "Work#{index}",
+   contents: "My work#{index}",
+   image: File.open("./test/fixtures/files/myweb01.png"))
+end
