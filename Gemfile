@@ -10,7 +10,9 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'bootstrap-sass'
 gem 'carrierwave'
-gem 'rmagick'
+gem 'mini_magick'
+#gem 'twitter-bootstrap-rails-confirm'
+#gem 'data-confirm-modal'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -41,6 +43,7 @@ group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rails-controller-testing'
 end
 
 group :development do

@@ -8,5 +8,6 @@
 6.times do |index|
   Work.create(name: "Work#{index}",
    contents: "My work#{index}",
-   image: File.open("./test/fixtures/files/myweb01.png"))
+   image: File.open("./test/fixtures/files/myweb01.png"),
+   link: "work@example.com")
 end

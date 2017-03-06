@@ -1,8 +1,16 @@
 <h1><%= @work.name %></h1>
 
-<div class="center jumbotron">
-<p><%= image_tag @work.image %></p>
-<p><%= @work.contents %></p>
+<div class="center-block jumbotron">
+  <div class="container ">
+  <!--  <div class="row">
+      <div class="col-xs-12 col-md-12" "col_lg_12"> -->
+        <p><%= image_tag(@work.image.url, class: "img-responsive") %></p>
+        <p><%= @work.contents %></p>
+        <p class="link">[ <%= link_to @work.link %> ]</p>
+  <!--    </div>
+  </div> -->
+  </div>
 </div>
-
-<p><%= button_to "戻る", { :action => "index" },{ :method => :get} %></p>
+<div  class="btn btn-secondary">
+  <%= button_to "戻る", {controller: "works", action: "index"}, { method: :get} %>
+</div>
