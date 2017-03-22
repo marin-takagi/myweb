@@ -1,0 +1,9 @@
+<table class="table table-striped">
+  <tr>
+    <th class="name"><%= link_to contact.name, contact %></th>
+    <td class="content"><%= contact.title %></td>
+    <td class="timestamp">
+      Posted <%= time_ago_in_words(contact.created_at) %> ago.
+    </td>
+  </tr>
+</table>

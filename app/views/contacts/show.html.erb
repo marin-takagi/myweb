@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="center">
+    <h1><%= @contact.name %></h1>
+    <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">title</th>
+            <td><%= @contact.title %></td>
+          </tr>
+          <tr>
+            <th scope="row">body</th>
+            <td><%= simple_format(@contact.body) %></td>
+          </tr>
+          <tr>
+            <th scope="row">email</th>
+            <td><%= @contact.email %></td>
+          </tr>
+          <tr>
+            <th scope="row">time</th>
+            <td>Posted <%= time_ago_in_words(@contact.created_at) %> ago.</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <%= link_to "DELETE", @contact, method: :delete, class: "btn btn-danger",
+  data: { confirm: "削除しますか？" } %>
+  <%= link_to "戻る", contacts_path%>
+</div>

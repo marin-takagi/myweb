@@ -1,0 +1,30 @@
+<% provide(:title, "Edit Work") %>
+
+<h1>Update Work</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@work, html: { multipart: true }) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :contents %>
+      <%= f.text_area :contents %>
+
+      <%= f.label :link %>
+      <%= f.text_field :link %>
+
+      </div>
+          <%= f.submit "Post", class: "btn btn-primary" %>
+          <span class="sendimage">
+            <%= f.file_field :image %>
+          </span>
+    <% end %>
+    <%= link_to "DELETE", @work, method: :delete, class: "btn btn-danger",
+                        data: { confirm: "You sure?" } %>
+    <div class="back">
+      <%= link_to "戻る", { controller: "works", action: "show" }, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
