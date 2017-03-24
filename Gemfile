@@ -12,6 +12,7 @@ gem 'bcrypt', '3.1.11'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
 #gem 'twitter-bootstrap-rails-confirm'
 #gem 'data-confirm-modal'
 # Use sqlite3 as the database for Active Record
