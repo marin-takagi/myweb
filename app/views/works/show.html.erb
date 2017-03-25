@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12" "col_lg_12">
-        <%= image_tag(@work.image.url, class: "img-responsive") %>
+        <%= image_tag(@work.image.url, class: "img-responsive") if @work.image? %>
         <div class="contents-area"
           <h2>-- 詳細 --</h2>
           <p><%= simple_format(@work.contents) %></p>

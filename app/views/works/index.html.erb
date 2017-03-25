@@ -6,7 +6,7 @@
       <% @works.each do |work| %>
         <div class="col-xs-6 col-sm-4 col-md-3">
           <div class="thumbnail">
-            <p><%= link_to image_tag(work.image.thumb.url), work%></p>
+            <p><%= link_to image_tag(work.image.thumb.url), work if work.image? %></p>
             <p class=contents_text><%= link_to work.name, work %></p>
           </div>
         </div>
