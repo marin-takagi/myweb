@@ -2,20 +2,16 @@
 
 <h1><%= @work.name %></h1>
 
-<div class="center jumbotron">
+<div class="jumbotron">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12" "col_lg_12">
-        <%= image_tag(@work.image.url, class: "img-responsive") if @work.image? %>
-        <div class="contents-area"
-          <h2>-- 詳細 --</h2>
-          <p><%= simple_format(@work.contents) %></p>
-        </div>
-        <% if !@work.link %>
-          <p class="link">[ <%= link_to @work.link %> ]</p>
-        <% end %>
-      </div>
+    <%= image_tag(@work.image.url, class: "img-responsive image-area") if @work.image? %>
+    <div class="text-area">
+      <h2>-- 詳細 --</h2>
+      <p><%= simple_format(@work.contents) %></p>
     </div>
+    <% if !@work.link %>
+      <p class="link">[ <%= link_to @work.link %> ]</p>
+    <% end %>
   </div>
 </div>
 <% if logged_in? %>
