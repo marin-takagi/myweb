@@ -240,6 +240,9 @@ GEM
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-user_agent (0.5.2)
+      rack (>= 1.5)
+      woothee (>= 1.0.0)
     rails (5.0.2)
       actioncable (= 5.0.2)
       actionmailer (= 5.0.2)
@@ -315,6 +318,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    woothee (1.5.0)
     xml-simple (1.1.5)
 
 PLATFORMS
@@ -333,6 +337,7 @@ DEPENDENCIES
   mini_magick
   pg (= 0.18.4)
   puma (= 3.8.2)
+  rack-user_agent
   rails (~> 5.0.1)
   rails-controller-testing
   sass-rails (~> 5.0)
