@@ -1,0 +1,21 @@
+<% provide(:title, "portfolio detail") %>
+
+<h1><%= @work.name %></h1>
+
+  <div class="container">
+    <%= image_tag(@work.image.url, class: "img-responsive image-area") if @work.image? %>
+    <div class="text-area">
+      <h2>-- 詳細 --</h2>
+      <p><%= simple_format(@work.contents) %></p>
+    </div>
+    <% if !@work.link %>
+      <p class="link">[ <%= link_to @work.link %> ]</p>
+    <% end %>
+  </div>
+</div>
+<% if logged_in? %>
+<%= link_to "EDIT", edit_work_path, class: "btn btn-primary" %>
+<%= link_to "DELETE", @work, method: :delete, class: "btn btn-danger",
+                    class: "btn btn-danger", data: { confirm: "削除しますか？" } %>
+<% end %>
+<%= link_to "戻る", { controller: "works", action: "index" }, class: "btn btn-secondary" %>

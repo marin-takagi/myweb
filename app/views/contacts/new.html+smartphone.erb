@@ -1,0 +1,23 @@
+<% provide(:title, "Contact") %>
+
+<h1>CONTACT</h1>
+
+<div class="container">
+    <%= form_for(@contact, url: contact_new_path) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :body %>
+      <%= f.text_area :body, class: 'contactbody form-control' %>
+
+      <%= f.submit "Send", class: 'btn btn-primary',
+                    data: { confirm: "送信しますか？"} %>
+    <% end %>
+</div>

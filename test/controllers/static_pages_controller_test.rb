@@ -10,7 +10,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get profiel" do
     get profiel_url
     assert_response :success
-    assert_select "title", "PROFIEL | MyWeb"
+    assert_select "title", "PROFILE | MyWeb"
   end
 
 end
