@@ -8,7 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-gem 'rack-user_agent'
 gem 'bcrypt', '3.1.11'
 gem 'bootstrap-sass'
 gem 'carrierwave'
@@ -41,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'sqlite3'
